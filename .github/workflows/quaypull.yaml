@@ -16,6 +16,7 @@ jobs:
 
       - name: Build podman image
         run: |
+          whoami
           podman build \
             -f Dockerfile
             -t my-image \
