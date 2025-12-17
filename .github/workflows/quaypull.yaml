@@ -1,7 +1,7 @@
 # This workflow to test whether the runner is able to build a podman
 # container image with Z where quay image is used 
 # Issue: https://github.com/IBM/actionspz/issues/63
-name: mtu-test
+name: quay-pull-test
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build Docker image
+      - name: Build podman image
         run: |
           podman build \
             -f Dockerfile
